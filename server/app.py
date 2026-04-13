@@ -12,6 +12,7 @@ api = Api(app)
 
 
 class Signup(Resource):
+    """POST /signup — register a new user, returns JWT + user."""
     def post(self):
         data = request.get_json()
         username = data.get("username", "").strip()
@@ -35,6 +36,7 @@ class Signup(Resource):
 
 
 class Login(Resource):
+    """POST /login — authenticate user, returns JWT + user."""
     def post(self):
         data = request.get_json()
         user = User.query.filter_by(username=data.get("username", "")).first()
@@ -47,6 +49,7 @@ class Login(Resource):
 
 
 class Me(Resource):
+    """GET /me — return current authenticated user."""
     @jwt_required()
     def get(self):
         user = db.session.get(User, get_jwt_identity())
