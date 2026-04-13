@@ -1,18 +1,3 @@
-# This file lists all Python dependencies with pinned versions.
-# It was generated from the active virtualenv using:
-#
-#   pip freeze > requirements.txt
-#
-# To install, activate a virtual environment first:
-#
-#   python3 -m venv venv
-#   source venv/bin/activate        # Windows: venv\Scripts\activate
-#   pip install -r requirements.txt
-#
-# This ensures everyone uses the exact same package versions.
-
-# To check if all the tests pass cd and get into the /server directory then $ pipenv run pytest -x -q test_app.py to see the results.
-
 alembic==1.14.1
 aniso8601==10.0.1
 attrs==25.3.0
