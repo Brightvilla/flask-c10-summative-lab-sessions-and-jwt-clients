@@ -125,6 +125,10 @@ These routes don't return web pages — they return JSON data. For example hitti
 
 The React frontend (`http://localhost:4000`) is the actual web page users interact with. Behind the scenes it talks to the Flask API to sign up, log in, and manage notes. Think of it like:
 
-```
 Browser (localhost:4000)  →  React App  →  Flask API (localhost:5555)
-```
+
+## How to Check if all the tests are passing
+
+cd ~/flask-c10-summative-lab-sessions-and-jwt-clients
+source .venv/bin/activate
+python -m pytest tests/ -v
